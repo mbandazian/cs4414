@@ -27,7 +27,7 @@ fn main() {
         match stream {
             Err(_) => (),
             // Spawn a task to handle the connection
-            Ok(mut stream) => spawn(proc() {
+            Ok(mut stream) => spawn(move|| {
                 match stream.peer_name() {
                     Err(_) => (),
                     Ok(pn) => println!("Received connection from: [{}]", pn),
