@@ -35,7 +35,7 @@ fn main() {
     }
 }
 
-fn xor(a: &Vec<u8>, b: &Vec<u8>) -> Vec<u8> {
+fn xor(a: &Vec<u8>, b: &Vec<u8>) -> Vec<u8>	 {
     let mut ret = vec![];
     for i in range(0, a.len()) {
 		ret.push(a[i] ^ b[i]);
